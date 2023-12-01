@@ -1,0 +1,148 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+body{
+    min-height: 100%;
+}
+html{
+    height: 100%;
+}
+.grid-container > *{
+   padding: 0px;
+}
+.navbar{
+    grid-area: navbar;
+    height: wrap;
+    background-color: darkorange;
+}
+.header{
+    grid-area: header;
+    height: wrap;
+}
+.main{
+    grid-area: main;
+    height: wrap;
+    background-color: coral;
+}
+.article{
+    grid-area: article;
+    height: wrap;
+    background-color: darkorange;
+}
+.contact{
+    grid-area: contact;
+    height: wrap;
+    background-color: coral;
+}
+.footer{
+    grid-area: footer;
+    background-color: coral;
+}
+/*Teléfono*/
+.grid-container{
+    display: grid;
+    gap: 0px;
+    grid-template-rows: 56px auto;
+    grid-template-areas:
+    "navbar"
+    "header"
+    "main"
+    "article"
+    "contact"
+    "footer" ;
+}
+/*Para tablet*/
+@media(min-width:768px){
+    .grid-container{
+        grid-template-columns: auto ;
+        grid-template-rows: 56px auto;
+        grid-template-areas: 
+        "navbar navbar"
+        "header header"
+        "main main"
+        "article article"
+        "contact contact"
+        "footer footer";
+    }
+}
+/*Para escritorio*/
+@media(min-width:900px){
+    .grid-container{
+        grid-template-columns: auto ;
+        grid-template-rows: 56px auto;
+        grid-template-areas: 
+        "navbar navbar navbar"
+        "header header header"
+        "main main main"
+        "article article article"
+        "contact contact contact"
+        "footer footer footer";
+    }
+}
+/*Animaciones*/
+@keyframes ajo{
+    from{
+          opacity: 1;
+    }
+    to{
+        opacity: 0;
+    }
+}
+.ajo{
+    animation-name: ajo;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
+
+}
+/* ===== SECTIONS TITLES AND DESC styles ===== */
+#title, #desc{
+    text-align: center;
+    padding: 8px;
+    margin: 0;
+    color: white;
+}
+/* ===== HEADER styles ===== */
+.header .card{
+    border-radius: 0;
+    border: 0;
+}
+/* ===== SECTION NO-MORE styles ===== */
+
+/* ===== SECTION NEWS styles ===== */
+#news img{
+    min-height: 200px;
+    max-height: 450px;
+}
+#news h5{
+    background-color: orange;
+}
+#news .carousel-caption p{
+    display:none;
+}
+
+
+/* ===== NAVBAR styles ===== */
+
+
+/*Gallery*/
+.gallery{
+    display: flex;
+    align-items: center;
+    column-gap: 20p´x;
+    overflow-x: scroll;
+    scroll-snap-type:  x mandatory;
+}
+
+.gallery_item{
+    scroll-snap-align: center;
+    min-width: 75%;
+}
+
+.gallery_image{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
