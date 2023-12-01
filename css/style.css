@@ -39,7 +39,13 @@ html{
 .footer{
     grid-area: footer;
     background-color: coral;
+    text-align: center;
+    color: whitesmoke;
+    list-style: none;
 }
+    footer li{
+        list-style: none;
+    }
 /*Teléfono*/
 .grid-container{
     display: grid;
@@ -98,20 +104,49 @@ html{
 
 }
 /* ===== SECTIONS TITLES AND DESC styles ===== */
-#title, #desc{
+.title, .desc{
     text-align: center;
     padding: 8px;
     margin: 0;
     color: white;
+}
+#img-temp{
+    width: 100%;
+    align-self: center;
 }
 /* ===== HEADER styles ===== */
 .header .card{
     border-radius: 0;
     border: 0;
 }
-/* ===== SECTION NO-MORE styles ===== */
-
+/* ===== SECTION psic-help styles ===== */
+#psic-help{
+    padding-top: 60px;
+}
+/* ===== SECTION legal-help styles ===== */
+#legal-help{
+    padding-top: 60px;
+}
+/* ===== SECTION courses-help styles ===== */
+#courses-help{
+    padding-top: 60px;
+}
+/* ===== SECTION violence-types styles ===== */
+#violence-types{
+    padding-top: 60px;
+}
+/* ===== SECTION ask-for-help styles ===== */
+#ask-for-help{
+    padding-top: 60px;
+}
+/* ===== SECTION no-more styles ===== */
+#no-more{
+    padding-top: 60px;
+}
 /* ===== SECTION NEWS styles ===== */
+#news{
+    padding-top: 60px;
+}
 #news img{
     min-height: 200px;
     max-height: 450px;
@@ -124,8 +159,10 @@ html{
 }
 
 
-/* ===== NAVBAR styles ===== */
-
+/* ===== CONTACT styles ===== */
+#contact{
+    padding-top: 60px;
+}
 
 /*Gallery*/
 .gallery{
